@@ -1,0 +1,6 @@
+sudo:以管理员权限执行命令
+sudo find / -name libjemalloc.so：查找文件
+要找出某个特定可执行依赖的库，可以使用ldd命令。这个命令调用动态链接器去找到程序的库文件依赖关系。
+$ ldd /path/to/program
+
+ifconfig -a :查看ip地址

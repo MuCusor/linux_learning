@@ -1,0 +1,23 @@
+./名称：运行相应的程序
+
+$ g++ helloworld.cpp -o helloworld  编译
+$ ./helloworld  运行
+也可以使用命令：
+$ gcc helloworld.cpp -lstdc++ -o helloworld
+$ c++ helloworld.cpp -o helloworld
+编译选项：
+选项 -c 用来告诉编译器编译源代码但不要执行链接，输出结果为对象文件。
+选项 -E使 g++ 将源代码用编译预处理器处理后不再执行其他动作。
+选项 -S指示编译器将程序编译成汇编语言，输出汇编语言代码而后结束。
+编译静态库：
+g++ -c myAPI.cpp  生成 myAPI.o
+ar crv libmyAPI.a myAPI.o  生成 libmyAPI.a
+g++ main.cpp libmyAPI.a -o output 
+编译动态库：
+g++ -shared -fPIC -o libmyAPI.so myAPI.o 生成 libmyAPI.so
+g++ main.cpp -L. -lmyAPI -o output 
+linux下编译时通过 -shared 参数可以生成动态库（.so）文件
+”-L.”标记告诉G++函数库可能位于当前目录;使用”-lmyAPI”标记来告诉G++驱动程序在连接阶段引用共享函数库libmyAPI.so。
+
+使用时如果提示如下错误，则将 libmyAPI.so 移到 /usr/lib 目录下即可
+

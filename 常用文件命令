@@ -1,0 +1,22 @@
+ctrl+l:在当前目录文件夹中显示全路径
+查看目录：
+	ls：列出当前目录下文件夹或文件项目
+	ls ..：显示上一级目录文件或文件夹
+	cd ***:走如***文件夹
+	cd或cd ..：返回上级目录
+	cd ../..：返回上上级目录
+	cd -：返回到跳转到当前目录之前的上一个操作的目录
+	cd ~：返回到主目录下
+	pwd:查看当前的目录
+创建目录：
+	mkdir -p con1/con2/con3  ：在当前目录下创建一个父目录，包含三层。
+	mkdir f1 f2 ：在当前目录下创建两个目录（文件夹）
+删除目录：
+	rmdir f1 f2 f3：删除三个目录。
+
+mv f1 f2：把分f1的目录重命名为f2
+cp /home/duola/test1/a.txt  /home/duola/test2/b.txt：复制文件
+mv /home/duola/test/a.txt  /home/duola/test2/b.txt：移动文件
+
+
+
